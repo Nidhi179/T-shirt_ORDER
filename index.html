@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tshirt Order</title>
+    <style>
+        * {
+            top: 0;
+            margin-left: 10px;
+            background-color: rgb(255, 255, 155);
+        }
+
+        .details,
+        .select {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            width: 20%;
+        }
+
+        button,
+        #rec {
+            width: 50%;
+            background-color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-left: 5px;
+            margin-top: 10px;
+
+        }
+
+        #rec:hover {
+            cursor: pointer;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+        #rept{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Fill in the details</h2>
+    <form>
+        <div class="details">
+            <strong>Name:</strong>
+            <input type="text" id="name" name="Name" maxlength="50" placeholder="Enter your name">
+
+            <strong>Address:</strong>
+            <input type="text" id="Address" name="address" maxlength="100" placeholder="Enter your address">
+
+            <strong>Contact:</strong>
+            <input type="number" id="phone" name="mobile" maxlength="10" placeholder="Enter your mobile no">
+        </div>
+        <br>
+        <div class="select">
+            <h3>What type of shirt do you want? </h3>
+            <table cellspacing="20">
+
+                <strong>Select Brand:</strong>
+
+                <Select name="brand" id="Brand">
+                    <option value="-1"></option>
+                    <option value="1">Only</option>
+                    <option value="2">Zara</option>
+                    <option value="3">H&M</option>
+                    <option value="4">Levis</option>
+                </Select>
+
+
+
+                <strong>Select color:</strong>
+
+                <Select name="color" id="colour">
+                    <option value="-1"></option>
+                    <option value="1">Blue</option>
+                    <option value="2">Red</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Green</option>
+                </Select>
+
+
+
+                <strong>Select size:</strong>
+
+                <Select name="size" id="Size">
+                    <option value="-1"></option>
+                    <option value="1"> XS </option>
+                    <option value="2"> S </option>
+                    <option value="3"> L </option>
+                    <option value="4"> XL </option>
+                </Select>
+
+
+
+                <strong>Enter Quantity:</strong>
+                <input type="number" id="qnt" name="quantity" maxlength="5">
+
+        </div>
+        <div class="pay">
+            <strong>
+                <h3> Payment type:</h3>
+            </strong>
+            <input type="radio" id="Cash" name="Payment" value="COD">
+            <label for="Cash">Cash on delivery</label><br>
+            <input type="radio" id="Credit" name="Payment" value="credit">
+            <label for="Credit">Credit Card</label><br>
+            <input type="radio" id="Debit" name="Payment" value="debit">
+            <label for="Debit">Debit Card</label><br>
+            <input type="radio" id="Gpay" name="Payment" value="gpay">
+            <label for="Credit">Gpay</label><br>
+            <input type="radio" id="Paytm" name="Payment" value="paytm">
+            <label for="Debit">Paytm</label><br>
+            <input type="button" id="rec" value="Reciept" onClick="print_reciept()">
+            <div id="rept"></div>
+            <div id="nm"></div>
+            <div id="ad"></div>
+            <div id="cn"></div>
+            <div id="bn"></div>
+            <div id="sz"></div>
+            <div id="qn"></div>
+            <div id="pt"></div>
+            <div id="dt"></div>
+        </div>
+    </form>
+    <button onclick="warning()">Order</button>
+<script src="script.js"></script>
+</body>
+
+</html>
