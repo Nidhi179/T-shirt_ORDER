@@ -10,7 +10,7 @@
         * {
             top: 0;
             margin-left: 10px;
-            background-color: rgb(255, 255, 155);
+            background-color: rgb(241, 241, 48);
         }
 
         .details,
@@ -22,21 +22,25 @@
             width: 20%;
         }
 
-        button,
-        #rec {
-            width: 50%;
+        button,#rec {
+            /* width: 50%; */
             background-color: white;
             font-weight: bold;
-            border-radius: 10px;
-            margin-left: 5px;
-            margin-top: 10px;
+            /* margin-left: 5px;
+            margin-top: 10px; */
 
         }
-
+        #ord,#cart{
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
         #rec:hover {
             cursor: pointer;
         }
-
+        input,select{
+            margin: 10px;
+        }
         button:hover {
             cursor: pointer;
         }
@@ -130,7 +134,8 @@
             <div id="dt"></div>
         </div>
     </form>
-    <button onclick="warning()">Order</button>
+    <button onclick="warning()" id="ord">ADD TO CART</button><br>
+    <button onclick="validate()" id="cart">Order</button>
 <script src="script.js"></script>
 </body>
 
